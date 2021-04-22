@@ -7,7 +7,7 @@ services:
       target: base
     environment:
       SERVER_DATABASE_NAME: test_db
-      PRISMA_DATABASE_URL: mysql://root:Umapuma@011210@database:3306/test_db?schema=public
+      PRISMA_DATABASE_URL: mysql://root:root@database:3306/test_db?schema=public
     ports:
       - 9999:80
     volumes:
