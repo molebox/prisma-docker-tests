@@ -1,9 +1,9 @@
-version: '3.7'
+version: "3.7"
 
 services:
   server:
     build:
-      context: '.'
+      context: "."
       target: base
     environment:
       SERVER_DATABASE_NAME: test_db
@@ -12,6 +12,7 @@ services:
       - 9999:80
     volumes:
       - ./src:/usr/src/app/src
+      - ./prisma:/usr/src/app/prisma
       - ./package.json:/usr/src/app/package.json
     networks:
       - test_vm
